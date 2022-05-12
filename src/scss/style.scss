@@ -77,24 +77,11 @@
         @extend .main__section;
         grid-template-rows: 0.1fr 0.1fr 1fr;
 
-        .section__title{
-
-        }
-        .section__gif{
-
-        }
         .section__list{
             row-gap: 50px;
 
             .list__sublist{
 
-                .sublist__title{
-
-                }
-
-                .sublist__text{
-
-                }
                 .grid_container{
                     border: 5px solid orange;
                 }
@@ -106,33 +93,18 @@
                         border: 5px solid orange;
                     }
                 }
-                .grid_line{
-
-                }
                 .grid_line :nth-child(3n+1){
                     border-right: 5px solid orange;
-                }
-
-                .grid_cell{
-
                 }
                 .grid_cell :first-child{
                     background-color: orange;
                     border: 5px solid orange;
-                }
-
-                .grid_track{
-
                 }
                 .grid_track :nth-child(3n+1){
                     background-color: orange;
                     border: 5px solid rgb(255, 136, 0);
                     border-top: none;
                     border-bottom: none;
-                }
-
-                .grid_area{
-
                 }
                 .grid_area :nth-child(3n+1),.grid_area :nth-child(3n+2){
                    background-color: orange;
@@ -145,12 +117,7 @@
         @extend .terminologie;
         grid-template-rows: .1fr .1fr 2.1fr;
 
-        .section__title{
-
-        }
-        .section__gif{
-
-        }
+        
         .section__list{
             row-gap: 50px;
 
@@ -171,13 +138,6 @@
 
                 }
 
-                .sublist__title{
-
-                }
-
-                .sublist__text{
-
-                }
 
                 .sublist__container{
                     @extend .sublist__container;
