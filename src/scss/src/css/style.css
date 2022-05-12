@@ -60,6 +60,9 @@
   background-color: rgb(70, 70, 70);
   border: 1px solid black;
 }
+.main .main__section .intro, .main .terminologie .intro, .main .properties .intro {
+  font-size: 2.5rem;
+}
 .main .terminologie, .main .properties {
   grid-template-rows: 0.1fr 0.1fr 1fr;
 }
