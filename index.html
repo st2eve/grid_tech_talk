@@ -19,7 +19,7 @@
             </div> 
             <ul class="section__list">
                 <li class="list__sublist">
-                    Système de mise en page bidimensionnel basé sur une grille.
+                    Système de mise en page basé sur une grille.
                 </li>
                 <li class="list__sublist">
                     C'est le tout premier module CSS créé spécifiquement pour résoudre les problèmes de mise en page.
@@ -67,7 +67,7 @@
                 </li>
             </ul>   
         </section>
-        <section class="main__section">
+        <section class="main__section terminologie">
             <h2 class="section__title">
                 Terminologie
             </h2>
@@ -77,7 +77,11 @@
             <ul class="section__list">
                 <li class="list__sublist">
                     <h3 class="sublist__title">Grid Container</h3>
-                    <div class="sublist__container">
+                    <p class="sublist__text">
+                        L'élément sur lequel display : grid est appliqué, connu aussi sous le nom de "parent"
+                    </p>
+                    <div class="sublist__container grid_container">
+                        <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
@@ -87,7 +91,11 @@
                 </li>
                 <li class="list__sublist">
                     <h3 class="sublist__title">Grid Item</h3>
-                    <div class="sublist__container">
+                    <p class="sublist__text">
+                        Les enfants du conteneur de la grille
+                    </p>
+                    <div class="sublist__container grid_item">
+                        <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
@@ -97,7 +105,11 @@
                 </li>
                 <li class="list__sublist">
                     <h3 class="sublist__title">Grid Line</h3>
-                    <div class="sublist__container">
+                    <p class="sublist__text">
+                        Les lignes de séparation qui constituent la structure de la grille.
+                    </p>
+                    <div class="sublist__container grid_line">
+                        <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
@@ -107,7 +119,11 @@
                 </li>
                 <li class="list__sublist">
                     <h3 class="sublist__title">Grid Cell</h3>
-                    <div class="sublist__container">
+                    <p class="sublist__text">
+                        L'espace entre deux lignes adjacentes et deux colonnes adjacentes de la grille.
+                    </p>
+                    <div class="sublist__container grid_cell">
+                        <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
@@ -117,7 +133,11 @@
                 </li>
                 <li class="list__sublist">
                     <h3 class="sublist__title">Grid Track</h3>
-                    <div class="sublist__container">
+                    <p class="sublist__text">
+                        L'espace entre deux lignes de grille adjacentes.
+                    </p>
+                    <div class="sublist__container grid_track">
+                        <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
@@ -127,13 +147,262 @@
                 </li>
                 <li class="list__sublist">
                     <h3 class="sublist__title">Grid Area</h3>
-                    <div class="sublist__container">
+                    <p class="sublist__text">
+                        L'espace total entouré de quatre lignes de la grille.
+                    </p>
+                    <div class="sublist__container grid_area">
+                        <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
                         <div class="container__item"></div>
                     </div>
+                </li>
+            </ul>   
+        </section>
+        <section class="main__section properties">
+            <h2 class="section__title">
+                Propriétés
+            </h2>
+            <div class="section__gif">
+                <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1627409507896/dOhJg5KKw.gif?auto=format,compress&gif-q=60&format=webm" alt="gif grid">
+            </div> 
+            <ul class="section__list">
+                <li class="list__sublist">
+                    <h3 class="sublist__title">
+                        Grid-template-columns & Grid-template-rows
+                    </h3>
+                    <p class="sublist__text">
+                        Définit les colonnes et les lignes de la grille avec une liste de valeurs séparées par des espaces.
+                    </p>
+                    <div class="sublist__container grid_template">
+                        <div class="container__block">
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                        </div>
+                        <code class="container__code">
+                            <p class="green">.container__block{</p>
+                            <p class="code__txt">display: grid;</p>
+                            <p class="code__txt">grid-template-columns: 1fr 1fr 1fr;</p>
+                            <p class="code__txt">grid-template-rows: 1fr 1fr;</p>
+                            <p class="green">}</p>
+                        <br/><p>Ou</p>
+                        <br/><p class="green">.container__block{</p>
+                            <p class="code__txt">display: grid;</p>
+                            <p class="code__txt">grid-template: 1fr 1fr / 1fr 1fr 1fr;</p>
+                            <p class="green">}</p>
+                        </code>
+                    </div>
+                    
+                </li>
+                <li class="list__sublist">
+                    <h3 class="sublist__title">
+                        Grid-area
+                    </h3>
+                    <p class="sublist__text">
+                        Donne à un élément un nom afin qu'il puisse être référencé par un modèle créé avec la propriété grid-template-areas.
+                    </p>
+                    <div class="sublist__container grid_area2">
+                        <div class="container__block">
+                            <div class="block__item item1"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                        </div>
+                        <code class="container__code">
+                            <p class="green">.item1 {</p>
+                            <p class="code__txt">grid-area: header;</p>
+                            <p class="code__txt">background-color: red;</p>
+                            <p class="code__txt">grid-area: 1 / 2 / 3 / 2;</p>
+                            <p class="green">}</p>
+                        <br/><p class="code__txt">
+                                "grid-area: row-start / column-start /<br/><br/><br/><br/><br/> row-end / column-end;"
+                            </p>
+                        </code>
+                    </div>
+                </li>
+                <li class="list__sublist">
+                    <h3 class="sublist__title">
+                        Grid-template-areas
+                    </h3>
+                    <p class="sublist__text">
+                        Définit un modèle de grille en faisant référence aux noms des zones de la grille qui sont spécifiées avec la propriété grid-area.
+                    </p>
+                    <div class="sublist__container grid_template_area">
+                        <div class="container__block template_area">
+                            <div class="block__item item1"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item item2"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item item3"></div>
+                            <div class="block__item"></div>
+                        </div>
+                        <code class="container__code">
+                            <p class="green">.item1 {</p>
+                            <p class="code__txt">grid-area: header;</p>
+                            <p class="code__txt">background-color: red;</p>
+                            <p class="green">}</p>
+                            <p class="green">.item2 {</p>
+                            <p class="code__txt">grid-area: side;</p>
+                            <p class="code__txt">background-color: orange;</p>
+                            <p class="green">}</p>
+                            <p class="green">.item3 {</p>
+                            <p class="code__txt">grid-area: footer;</p>
+                            <p class="code__txt">background-color: green;</p>
+                            <p class="green">}</p>
+                            <p class="green">.template_area{</p>
+                            <p class="code__txt">grid-template-areas:</p>
+                            <p class="code__txt">"header header side"</p>
+                            <p class="code__txt">"footer footer side";</p>
+                            <p class="green">}</p>
+                        </code>
+                    </div>
+                </li>
+                <li class="list__sublist">
+                    <h3 class="sublist__title">
+                        Grid-column-start, Grid-column-end, Grid-row-start et Grid-row-end
+                    </h3>
+                    <p class="sublist__text">
+                        Détermine l'emplacement d'un élément de grille dans la grille en se référant à des lignes de grille spécifiques.
+                    </p>
+                    <div class="sublist__container grid_startend">
+                        <div class="container__block">
+                            <div class="block__item item1"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item item2"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item item3"></div>
+                            <div class="block__item"></div>
+                        </div>
+                        <code class="container__code">
+                            <p class="green">.item1 {</p>
+                            <p class="code__txt">grid-column: 2 / 4;</p>
+                            <p class="code__txt">grid-row: 1 / 2;</p>
+                            <p class="code__txt">background-color: red;</p>
+                            <p class="green">}</p>
+                            <p class="green">.item2 {</p>
+                                <p class="code__txt">grid-column: 1 / 2;</p>
+                                <p class="code__txt">grid-row: 1 / 3;</p>
+                            <p class="code__txt">background-color: orange;</p>
+                            <p class="green">}</p>
+                            <p class="green">.item3 {</p>
+                                <p class="code__txt">grid-column: 2 / 4;</p>
+                                <p class="code__txt">grid-row: 2 / 3;</p>
+                            <p class="code__txt">background-color: green;</p>
+                            <p class="green">}</p>
+                        </code>
+                    </div>
+                </li>
+                <li class="list__sublist">
+                    <h3 class="sublist__title">
+                        Column-gap, Row-gap, Grid-column-gap, Grid-row-gap
+                    </h3>
+                    <p class="sublist__text">
+                        Spécifie la taille des lignes de la grille.
+                    </p>
+                    <div class="sublist__container grid_gap">
+                        <div class="container__block">
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                        </div>
+                        <code class="container__code">
+                            <p class="green">.container__block{</p>
+                                <p class="code__txt">display: grid;</p>
+                                <p class="code__txt">grid-template-columns: 1fr 1fr 1fr;</p>
+                                <p class="code__txt">grid-template-rows: 1fr 1fr;</p>
+                                <p class="code__txt">gap: 20px 10px;</p>
+                                <p class="green">}</p>
+                        </code>
+                    </div>
+                </li>
+                <li class="list__sublist">
+                    <h3 class="sublist__title">
+                        Justify-item, Align-item & Place-content
+                    </h3>
+                    <p class="sublist__text">
+                        Aligne les éléments de la grille le long de l'axe de la colonne et/ou de la ligne.
+                    </p>
+                    <div class="sublist__container grid_place">
+                        <div class="container__block">
+                            <div class="block__item"></div>
+                            <div class="block__item item1"> </div>
+                            <div class="block__item"></div>
+                            <div class="block__item item2"></div>
+                            <div class="block__item"></div>
+                            <div class="block__item"></div>
+                        </div>
+                        <code class="container__code">
+                            <p class="green">.container__block{</p>
+                                <p class="code__txt">display: grid;</p>
+                                <p class="code__txt">place-items: center;</p>
+                                <p class="green">}</p>
+                                    <p class="green">.item1{</p>
+                                        <p class="code__txt">width: 25px;</p>
+                                        <p class="code__txt">height: 25px;</p>
+                                        <p class="code__txt">background-color: red;</p>
+                                        <p class="code__txt">justify-self: end;</p>
+                                <p class="green">}</p>
+                                    <p class="green">.item2{</p>
+                                        <p class="code__txt">width: 25px;</p>
+                                        <p class="code__txt">height: 25px;</p>
+                                        <p class="code__txt">background-color: green;</p>
+                                        <p class="code__txt">justify-self: center;</p>
+                                        <p class="code__txt">align-self: start;</p>
+                                <p class="green">}</p>
+                        </code>
+                    </div>
+                </li>
+            </ul>   
+        </section>
+        <section class="main__section conclusion">
+            <h2 class="section__title">
+                Conclusion
+            </h2>
+            <div class="section__gif">
+                <img src="https://c.tenor.com/NugDSHSWylAAAAAd/so-in-conclusion-generalization.gif" alt="gif grid">
+            </div>
+            <p class="section__text">
+                Grid est complexe mais possède un énorme potentiel lorsqu'il est maitrisé et il est complémentaire avec Flexbox qui lui est plus simple dans sa prise en main.
+            </p>
+            <h3 class="section__title3">
+                Liens
+            </h3>
+            <ul class="section__list">
+                <li class="list__sublist">
+                    <a class="sublist__liens" href="https://css-tricks.com/snippets/css/complete-guide-grid/" target="_blank">
+                        Guide complet sur Grid par CSS tricks
+                    </a>
+                </li>
+                <li class="list__sublist">
+                    <a class="sublist__liens" href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout" target="_blank">
+                        Guide complet sur Grid par Developer Mozilla
+                    </a>
+                </li>
+                <li class="list__sublist">
+                    <a class="sublist__liens" href="https://www.w3schools.com/css/css_grid.asp" target="_blank">
+                        Guide complet sur Grid par W3schools
+                    </a>
+                </li>
+                <li class="list__sublist">
+                    <a class="sublist__liens" href="https://griddy.io/" target="_blank">
+                        Generateur de Grid par Griddy
+                    </a>
+                </li>
+                <li class="list__sublist">
+                    <a class="sublist__liens" href="https://grid.layoutit.com/" target="_blank">
+                        Generateur de Grid par Layoutit
+                    </a>
                 </li>
             </ul>   
         </section>
